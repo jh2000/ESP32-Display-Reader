@@ -374,7 +374,7 @@ void loop() {
   if (!preCaptureActive) {
     if (!g_liveStreamTriggerActive && now - lastEvalMs >= intervalMs) {
       if (!cfg.mqtt.enabled) {
-        LOGI("Periodic capture skipped: MQTT disabled\n");
+    //    LOGI("Periodic capture skipped: MQTT disabled\n"); // Auskommentiert da ohne MQTT die Meldung AFAP auf die Konsole geschrieben wird, was die restlichen Abläufe hängen lässt.
       } else if (isPreCaptureEnabled(cfg)) {
         lastEvalMs = now;
         preCaptureTrigger(cfg);
