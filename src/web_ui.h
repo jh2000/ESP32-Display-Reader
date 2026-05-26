@@ -635,6 +635,7 @@ progress{
           <select id="cam_model">
             <option value="freenove_wrover">Freenove WROVER</option>
             <option value="ai_thinker">AI-Thinker ESP32-CAM</option>
+            <option value="custom_esp32s3">Custom ESP32-S3</option>
           </select>
         </label>
 
