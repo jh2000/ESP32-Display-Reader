@@ -80,6 +80,29 @@ static bool fillCameraPins(camera_config_t &c, const String &model) {
     c.pin_pclk = 22;
     return true;
   }
+  
+if (model == "custom_esp32s3") {
+    c.pin_pwdn = -1;
+    c.pin_reset = -1;
+    c.pin_xclk = 39;
+    c.pin_sccb_sda = 15;
+    c.pin_sccb_scl = 16;
+
+    c.pin_d7 = 14;
+    c.pin_d6 = 13;
+    c.pin_d5 = 12;
+    c.pin_d4 = 11;
+    c.pin_d3 = 10;
+    c.pin_d2 = 9;
+    c.pin_d1 = 8;
+    c.pin_d0 = 7;
+
+    c.pin_vsync = 42;
+    c.pin_href = 41;
+    c.pin_pclk = 46;
+
+    return true;
+  }
 
   return false;
 }
